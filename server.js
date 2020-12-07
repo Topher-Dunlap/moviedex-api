@@ -23,6 +23,11 @@ app.use(function validateBearerToken(req, res, next) {
     next()
 })
 
+app.get('/larry', function getLarry(req, res) {
+    const larryObj = {l:"larry"}
+    res.json(larryObj)
+})
+
 app.get('/movie', function handleGetMovie(req, res) {
     let response = MOVIES;
 
